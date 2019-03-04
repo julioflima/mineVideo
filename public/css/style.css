@@ -100,24 +100,37 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .fh5co-nav .left-menu, .fh5co-nav .right-menu, .fh5co-nav .logo {
-  display: inline-block;
-  width: 40%;
+  width: 20%;
   float: left;
+  top: 50vh !important;
+
 }
 .fh5co-nav .logo {
-  width: 20%;
+  width: 60%;
   float: left;
 }
 .fh5co-nav #fh5co-logo {
-  font-size: 26px;
+  font-size: 50px;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
-  font-weight: bold;
+  font-family: 'Dr Sugiyama', cursive;
+  font-weight: 400;
+  top: 35vh !important;
+    position: relative;
+}
+
+.back{
+
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav #fh5co-logo {
-    font-size: 22px;
+    top: 0vh !important;
+    position: unset;
+    float: left;
+    padding-left: 1vw;
+}
+  .fh5co-nav #fh5co-logo {
+    font-size: 35px;
   }
 }
 .fh5co-nav a {
@@ -228,8 +241,10 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header,
 #fh5co-counter,
 .fh5co-bg {
+  background: url('../images/img_bg_2.jpg') ;  
+  background-position: center; 
   background-size: cover;
-  background-position: top center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -253,7 +268,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-cover {
-  height: 800px;
+  height: 100vh;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -268,14 +283,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 62, 28, 0.5);
-  background: -moz-linear-gradient(left, rgba(255, 62, 28, 0.5) 0%, rgba(255, 62, 28, 0.63) 26%, darkorange 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 62, 28, 0.5)), color-stop(26%, rgba(255, 62, 28, 0.63)), color-stop(100%, darkorange));
-  background: -webkit-linear-gradient(left, rgba(255, 62, 28, 0.5) 0%, rgba(255, 62, 28, 0.63) 26%, darkorange 100%);
-  background: -o-linear-gradient(left, rgba(255, 62, 28, 0.5) 0%, rgba(255, 62, 28, 0.63) 26%, darkorange 100%);
-  background: -ms-linear-gradient(left, rgba(255, 62, 28, 0.5) 0%, rgba(255, 62, 28, 0.63) 26%, darkorange 100%);
-  background: linear-gradient(to right, rgba(255, 62, 28, 0.5) 0%, rgba(255, 62, 28, 0.63) 26%, darkorange 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3e1c', endColorstr='#ff8c00', GradientType=1 );
+  background: rgba(255, 62, 28, 0.2);
 }
 .fh5co-cover > .fh5co-container {
   position: relative;
@@ -283,7 +291,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 600px;
+    height: 100vh;
   }
 }
 .fh5co-cover .display-t,
@@ -300,7 +308,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .fh5co-cover.fh5co-cover-sm {
-  height: 600px;
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm {
@@ -389,7 +397,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .display-tc .form-inline .form-group .form-control,
 .fh5co-cover .display-tc .form-inline .form-group .form-control {
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 1);
   border: none;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
