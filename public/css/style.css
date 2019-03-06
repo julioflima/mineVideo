@@ -5,6 +5,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'ProFont For Powerline';
+  src:  url('../fonts/ProFont\ For\ Powerline.ttf');
+}
 /* =======================================================
 *
 * 	Template Style 
@@ -84,6 +89,19 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #F36363;
 }
 
+.console{
+  font-size: 15px;
+  position: absolute;
+  padding: 20px;
+  top: 70vh;
+  color: white;
+  font-family: 'ProFont For Powerline';
+  font-weight: 100;
+  height: 30vh;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
 .fh5co-nav {
   position: absolute;
   top: 2em;
@@ -94,6 +112,11 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 1001;
 }
 @media screen and (max-width: 768px) {
+  .console{
+    top: 55vh;
+    font-size: 10px
+    
+  }
   .fh5co-nav {
     padding: 20px 0;
     top: 0;
