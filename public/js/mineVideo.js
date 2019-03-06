@@ -18,7 +18,13 @@ if (mineNow) {
 }
 
 const cloudComputing = function (somethingSearch) {
-    alert(somethingSearch);
+    let promiseSearch = getSomethingSearch(somethingSearch);
+    promiseSearch.then((result) => {
+        consoleRemote.innerHTML = consoleRemote.innerHTML + "<br />" + JSON.stringify(result);
+    })
+    .catch((error) => {
+        consoleRemote.innerHTML = consoleRemote.innerHTML + "<br />" + error;
+    });
 
 };
 
@@ -28,3 +34,27 @@ setInterval(function () {
     }
 }, 10)
 
+async function getSomethingSearch(somethingSearch) {
+    let dataReturn;
+    let result = await $.ajax({
+        url: 'https://us-central1-minevideo-2ceee.cloudfunctions.net/submit',
+        dataType: "json",
+        method: 'GET',
+        crossDomain: true,
+        headers: {
+            'Accept': 'application/json'
+        },
+
+        data: {
+            "somethingSearch": somethingSearch
+        },
+
+        success: function (data) {
+            console.log(JSON.stringify(dataReturn));
+            dataReturn = data;
+        }
+    });
+
+    return dataReturn;
+
+}

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "minevideo": "minevideo-2ceee"
+    "minevideo": "minevideo-2ceee",
+    "default": "minevideo-2ceee"
   }
 }
