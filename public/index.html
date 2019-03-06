@@ -56,20 +56,19 @@
 					<div class="left-menu text-right menu-1">
 						<ul>
 							<li class="has-dropdown">
-								<a href="about.html">About</a>
+								<a onClick="showAbout()" href="#fh5co-about">About</a>
 							</li>
 						</ul>
 					</div>
 					<div class="logo text-center">
 						<div id="fh5co-logo"><a href="index.html">mineVideo
 								<img src="images/pick.png" height="50px">
-
 							</a></div>
 					</div>
 					<div class=" right-menu text-left menu-1">
 						<ul>
 							<li class="has-dropdown">
-								<a href="contact.html">Contact</a>
+								<a onClick="showContact()" href="#fh5co-contact">Contact</a>
 								<ul class="dropdown">
 									<li><a href="+5585998614541">Whatsapp</a></li>
 									<li><a href="https://www.facebook.com/julioflima">Facebook</a></li>
@@ -118,148 +117,153 @@
 			</div>
 		</header>
 
-		<div id="fh5co-about">
-			<div class="container">
-				<div class="about-content">
-					<div class="row animate-box">
-						<div class="col-md-6 col-md-push-6">
-							<div class="desc">
-								<h3>History</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo est quis mollitia
-									ratione magni assumenda repellat atque modi temporibus tempore ex. Dolore facilis ex
-									sunt ea praesentium expedita numquam?</p>
-								<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
-									repellat velit eaque aspernatur expedita. Possimus itaque adipisci rem dolorem
-									nesciunt perferendis quae amet deserunt eum labore quidem minima.</p>
+		<div>
+			<div id="fh5co-about" style="display:none">
+				<div class="container">
+					<div class="about-content">
+						<div class="row animate-box">
+							<div class="col-md-6 col-md-push-6">
+								<div class="desc">
+									<h3>History</h3>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo est quis
+										mollitia
+										ratione magni assumenda repellat atque modi temporibus tempore ex. Dolore
+										facilis ex
+										sunt ea praesentium expedita numquam?</p>
+									<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates
+										id
+										repellat velit eaque aspernatur expedita. Possimus itaque adipisci rem dolorem
+										nesciunt perferendis quae amet deserunt eum labore quidem minima.</p>
+								</div>
+								<div class="desc">
+									<h3>Mission &amp; Vission</h3>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo est quis
+										mollitia
+										ratione magni assumenda repellat atque modi temporibus tempore ex. Dolore
+										facilis ex
+										sunt ea praesentium expedita numquam?</p>
+									<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates
+										id
+										repellat velit eaque aspernatur expedita. Possimus itaque adipisci rem dolorem
+										nesciunt perferendis quae amet deserunt eum labore quidem minima.</p>
+								</div>
 							</div>
-							<div class="desc">
-								<h3>Mission &amp; Vission</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo est quis mollitia
-									ratione magni assumenda repellat atque modi temporibus tempore ex. Dolore facilis ex
-									sunt ea praesentium expedita numquam?</p>
-								<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
-									repellat velit eaque aspernatur expedita. Possimus itaque adipisci rem dolorem
-									nesciunt perferendis quae amet deserunt eum labore quidem minima.</p>
+							<div class="col-md-6 col-md-pull-6">
+								<img class="img-responsive" src="images/img_bg_1.jpg" alt="about">
 							</div>
-						</div>
-						<div class="col-md-6 col-md-pull-6">
-							<img class="img-responsive" src="images/img_bg_1.jpg" alt="about">
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<div id="fh5co-contact" style="display:none; padding-bottom: 0em;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5 col-md-push-1 animate-box">
+
+							<div class="fh5co-contact-info">
+								<h3>Contact Information</h3>
+								<ul>
+									<li class="address">Dr. Justa Araujo 1408,<br> Fortaleza, CE, Brazil</li>
+									<li class="phone"><a href="tel://1234567920">+55 85 9 9861 4541</a></li>
+									<li class="email"><a href="mailto:julio_flima@hotmail.com">julio_flima@hotmail.com</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-6 animate-box">
+							<h3>Get In Touch</h3>
+							<form action="#">
+								<div class="row form-group">
+									<div class="col-md-6">
+										<!-- <label for="fname">First Name</label> -->
+										<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+									</div>
+									<div class="col-md-6">
+										<!-- <label for="lname">Last Name</label> -->
+										<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+									</div>
+								</div>
+
+								<div class="row form-group">
+									<div class="col-md-12">
+										<!-- <label for="email">Email</label> -->
+										<input type="text" id="email" class="form-control"
+											placeholder="Your email address">
+									</div>
+								</div>
+
+								<div class="row form-group">
+									<div class="col-md-12">
+										<!-- <label for="subject">Subject</label> -->
+										<input type="text" id="subject" class="form-control"
+											placeholder="Your subject of this message">
+									</div>
+								</div>
+
+								<div class="row form-group">
+									<div class="col-md-12">
+										<!-- <label for="message">Message</label> -->
+										<textarea name="message" id="message" cols="30" rows="10" class="form-control"
+											placeholder="Say something about us"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="submit" value="Send Message" class="btn btn-primary">
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<div id="map" class="fh5co-map"></div>
+			</div>
 		</div>
-	</div>
 
-
-	<div id="fh5co-contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 col-md-push-1 animate-box">
-
-					<div class="fh5co-contact-info">
-						<h3>Contact Information</h3>
-						<ul>
-							<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
-							<li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li class="url"><a href="http://FreeHTML5.co">FreeHTML5.co</a></li>
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block"> 2019 | Julio Lima | All Rights Reserved.</small>
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-youtube"></i></a></li>
+							<li><a href="https://www.facebook.com/julioflima"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/julioflima/"><i class="icon-linkedin"></i></a>
+							</li>
+							<li><a href="https://github.com/juloko"><i class="icon-github"></i></a></li>
+							<li><a href="mailto:julio_flima@hotmail.com?subject=Hi"><i class="icon-email"></i></a>
+							</li>
 						</ul>
-					</div>
-
-				</div>
-				<div class="col-md-6 animate-box">
-					<h3>Get In Touch</h3>
-					<form action="#">
-						<div class="row form-group">
-							<div class="col-md-6">
-								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-							</div>
-							<div class="col-md-6">
-								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control"
-									placeholder="Your subject of this message">
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="message">Message</label> -->
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control"
-									placeholder="Say something about us"></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
-						</div>
-
-					</form>
+					</p>
 				</div>
 			</div>
+		</footer>
 
-		</div>
-	</div>
-
-	<div id="map" class="fh5co-map"></div>
-
-	<footer id="fh5co-footer" role="contentinfo">
-
-
-		<div class="row copyright">
-			<div class="col-md-12 text-center">
-				<p>
-					<small class="block"> 2019 | Julio Lima | All Rights Reserved.</small>
-				</p>
-				<p>
-					<ul class="fh5co-social-icons">
-						<li><a href="#"><i class="icon-youtube"></i></a></li>
-						<li><a href="https://www.facebook.com/julioflima"><i class="icon-facebook"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/julioflima/"><i class="icon-linkedin"></i></a></li>
-						<li><a href="https://github.com/juloko"><i class="icon-github"></i></a></li>
-						<li><a href="mailto:julio_flima@hotmail.com?subject=Hi"><i class="icon-email"></i></a></li>
-					</ul>
-				</p>
-			</div>
+		<div class="gototop js-top">
+			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 		</div>
 
-	</footer>
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Main Template-->
+		<script src="js/main.js"></script>
+		<!-- Main -->
+		<script src="js/mineVideo.js"></script>
+		<!-- Google Map -->
+		<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8YFxNVj9NiLyYqKxmpBoFTBeSD-6NH5I&language=EN"></script>
+		<script src="js/google_map.js"></script>
 	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Main Template-->
-	<script src="js/main.js"></script>
-	<!-- Main -->
-	<script src="js/mineVideo.js"></script>
-	<!-- Google Map -->
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
 
 </body>
 
