@@ -1,8 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require("firebase-admin");
-const googleTrends = require('google-trends-api');
-const math = require('mathjs')
-const serviceAccount = require("./serviceAccountKey");
+const serviceAccount = require("../serviceAccountKey");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -14,7 +12,7 @@ const db = admin.firestore();
 exports = module.exports = functions.https.onRequest((req, res) => {
     res.set("Access-Control-Allow-Origin", "*");
     let result;
-    if (req.query.somethingSearch === undefined) {
+    if (req.query.searchTerm === undefined) {
         result = req.body;
     } else {
         result = req.query;
@@ -25,8 +23,8 @@ exports = module.exports = functions.https.onRequest((req, res) => {
         'status': 'doing',
         'log': 'something rised',
         content: {
-            'searchTerm': result.somethingSearch,
-            'prefix': await getPrexifTrends(content.searchTerm),
+            'searchTerm': result.searchTerm,
+            'prefix': '...',
             'sourceContentOriginal': "...",
             'sourceContentSanitized': "...",
             'sentences': [
@@ -56,30 +54,3 @@ exports = module.exports = functions.https.onRequest((req, res) => {
         throw res.send("Error adding document: ", error);
     });
 });
-
-async function getPrexifTrends(searchTerm) {
-    const prefixes = ['Who is', 'What is', 'The history of']
-    let prefixesTrend = []
-    let mostTrend;
-    prefixes.forEach((elem) => {
-        prefixesTrend.push(elem + ' ' + searchTerm);
-    });
-
-    return googleTrends.interestOverTime({ keyword: prefixesTrend }).then((results) => {
-        let data = JSON.parse(results);
-        let values = [];
-        data.default.timelineData.forEach((elem) => {
-            values.push(elem.value);
-        });
-
-        let mostTrends = [];
-        math.transpose(values).forEach((elem) => {
-            mostTrends.push(math.sum(elem));
-        });
-
-        return prefixes[mostTrends.indexOf(math.max(mostTrends))];
-    }).catch((err) => {
-        console.error('Oh no there was an error', err);
-        return prefixes[Math.random() * prefixes.length];
-    });
-}
